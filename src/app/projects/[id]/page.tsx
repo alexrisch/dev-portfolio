@@ -3,8 +3,9 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 
-export default function ProjectPage({ params }: { params: { id: string } }) {
-  const projectIndex = parseInt(params.id);
+export default async function ProjectPage({ params }: { params: Promise<{ id: string }> }) {
+  const pageParams = await params;
+  const projectIndex = parseInt(pageParams.id);
   const project = projects[projectIndex];
 
   if (!project) {
@@ -90,3 +91,9 @@ export default function ProjectPage({ params }: { params: { id: string } }) {
     </main>
   );
 } 
+
+export async function generateStaticParams() {
+  return projects.map((project) => ({
+    id: project.id,
+  }));
+}

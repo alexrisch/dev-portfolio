@@ -2,6 +2,7 @@ import { Project } from '@/types/project';
 
 export const projects: Project[] = [
   {
+    id: "1",
     title: "Sample Project 1",
     description: "A brief description of the first project",
     techStack: ["Next.js", "TypeScript", "Tailwind CSS"],
