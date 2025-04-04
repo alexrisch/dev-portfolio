@@ -1,36 +1,128 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Personal Portfolio Website
+
+A modern, responsive portfolio website built with Next.js, TypeScript, and Tailwind CSS. This portfolio showcases projects with a clean, professional design and is optimized for deployment on GitHub Pages.
+
+## Features
+
+- 🚀 Built with Next.js App Router
+- 💻 Responsive design that works on all devices
+- 🌓 Dark mode support
+- 📱 Optimized images with Next.js Image component
+- 🔗 Dynamic project pages
+- 🎨 Clean, modern UI with Tailwind CSS
+- 📊 Project showcase with tech stack display
+- 🔄 Automatic deployment to GitHub Pages
+
+## Project Structure
+
+```
+alex-portfolio-web/
+├── public/              # Static assets
+│   └── images/          # Project images
+├── src/
+│   ├── app/             # Next.js App Router
+│   │   ├── layout.tsx   # Root layout
+│   │   ├── page.tsx     # Home page
+│   │   └── projects/    # Project pages
+│   ├── data/            # Project data
+│   │   └── projects.ts  # Project information
+│   └── types/           # TypeScript types
+│       └── project.ts   # Project interface
+├── .github/             # GitHub configuration
+│   └── workflows/       # GitHub Actions
+├── next.config.mjs      # Next.js configuration
+└── README.md            # This file
+```
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+- Node.js 18.x or later
+- npm or yarn
+
+### Installation
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/yourusername/alex-portfolio-web.git
+   cd alex-portfolio-web
+   ```
+
+2. Install dependencies:
+   ```bash
+   npm install
+   # or
+   yarn install
+   ```
+
+3. Run the development server:
+   ```bash
+   npm run dev
+   # or
+   yarn dev
+   ```
+
+4. Open [http://localhost:3000](http://localhost:3000) in your browser to see the result.
+
+## Customizing Your Portfolio
+
+### Adding Projects
+
+Edit the `src/data/projects.ts` file to add your own projects:
+
+```typescript
+export const projects: Project[] = [
+  {
+    title: "Your Project Title",
+    description: "A detailed description of your project",
+    techStack: ["React", "Node.js", "MongoDB"],
+    headerMedia: "/images/your-project-header.jpg",
+    media: ["/images/your-project-1.jpg", "/images/your-project-2.jpg"],
+    footer: "Additional information about your project",
+    repoLink: "https://github.com/yourusername/your-project"
+  },
+  // Add more projects as needed
+];
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Adding Images
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+1. Place your project images in the `public/images/` directory
+2. Reference them in your project data using paths like `/images/your-image.jpg`
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Updating Personal Information
 
-## Learn More
+Edit the `src/app/page.tsx` file to update your name and description in the hero section.
 
-To learn more about Next.js, take a look at the following resources:
+## Deployment
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+This project is configured for automatic deployment to GitHub Pages using GitHub Actions.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Manual Deployment
 
-## Deploy on Vercel
+1. Build the project:
+   ```bash
+   npm run build
+   # or
+   yarn build
+   ```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+2. The static files will be generated in the `out` directory.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### GitHub Pages Setup
+
+1. Go to your repository settings on GitHub
+2. Navigate to "Pages" in the sidebar
+3. Under "Source", select "GitHub Actions"
+4. The site will be automatically deployed when you push to the main branch
+
+## License
+
+This project is open source and available under the [MIT License](LICENSE).
+
+## Acknowledgements
+
+- [Next.js](https://nextjs.org/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [shadcn/ui](https://ui.shadcn.com/)
