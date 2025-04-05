@@ -5,6 +5,7 @@ export interface Project {
   techStack: string[];
   headerMedia: string;
   media: string[];
-  footer: string;
+  footer?: string;
   repoLink?: string;
+  link?: string;
 } 

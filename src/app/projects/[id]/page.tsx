@@ -1,11 +1,11 @@
-import { projects } from '@/data/projects';
+import { projectIds, projects } from '@/data/projects';
 import Image from 'next/image';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 
 export default async function ProjectPage({ params }: { params: Promise<{ id: string }> }) {
   const pageParams = await params;
-  const projectIndex = parseInt(pageParams.id);
+  const projectIndex = pageParams.id;
   const project = projects[projectIndex];
 
   if (!project) {
@@ -15,7 +15,7 @@ export default async function ProjectPage({ params }: { params: Promise<{ id: st
   return (
     <main className="min-h-screen p-8">
       <div className="max-w-4xl mx-auto">
-        <Link 
+        <Link
           href="/"
           className="inline-block mb-8 text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-200"
         >
@@ -24,7 +24,7 @@ export default async function ProjectPage({ params }: { params: Promise<{ id: st
 
         <article>
           <h1 className="text-4xl font-bold mb-4">{project.title}</h1>
-          
+
           <div className="relative h-96 w-full mb-8">
             <Image
               src={project.headerMedia}
@@ -33,6 +33,19 @@ export default async function ProjectPage({ params }: { params: Promise<{ id: st
               className="object-cover rounded-lg"
             />
           </div>
+          {project.link && (
+            <div className="mb-8">
+              <a
+                href={project.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block px-6 py-3 bg-black text-white dark:bg-white dark:text-black rounded-lg hover:bg-gray-800 dark:hover:bg-gray-200 transition-colors"
+              >
+                View Project
+              </a>
+            </div>
+          )}
+
 
           <div className="mb-8">
             <h2 className="text-2xl font-semibold mb-4">Description</h2>
@@ -43,7 +56,7 @@ export default async function ProjectPage({ params }: { params: Promise<{ id: st
             <h2 className="text-2xl font-semibold mb-4">Tech Stack</h2>
             <div className="flex flex-wrap gap-2">
               {project.techStack.map((tech, index) => (
-                <span 
+                <span
                   key={index}
                   className="px-3 py-1 bg-gray-100 dark:bg-gray-700 rounded-full"
                 >
@@ -90,10 +103,10 @@ export default async function ProjectPage({ params }: { params: Promise<{ id: st
       </div>
     </main>
   );
-} 
+}
 
 export async function generateStaticParams() {
-  return projects.map((project) => ({
-    id: project.id,
+  return projectIds.map((id) => ({
+    id,
   }));
 }
