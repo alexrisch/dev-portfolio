@@ -81,12 +81,6 @@ export default async function ProjectPage({ params }: { params: Promise<{ id: st
               ))}
             </div>
           </div>
-
-          <div className="mb-8">
-            <h2 className="text-2xl font-semibold mb-4">Additional Information</h2>
-            <p className="text-gray-600 dark:text-gray-300">{project.footer}</p>
-          </div>
-
           {project.repoLink && (
             <div className="mb-8">
               <a
@@ -97,6 +91,12 @@ export default async function ProjectPage({ params }: { params: Promise<{ id: st
               >
                 View Repository
               </a>
+            </div>
+          )}
+          {project.footer && (
+            <div className="mb-8">
+              <h2 className="text-2xl font-semibold mb-4">Additional Information</h2>
+              <p className="text-gray-600 dark:text-gray-300">{project.footer}</p>
             </div>
           )}
         </article>

@@ -1,6 +1,15 @@
 import { Project } from '@/types/project';
 
 export const projects: Record<string, Project> = {
+  "bright-side-app": {
+    id: "bright-side-app",
+    title: "Bright Side App",
+    description: "App for creating and sharing uplifting messages around the world.",
+    techStack: ["React Native", "Expo", "Tamagui", "GraphQL", "AWS", "Node.js", "Python"],
+    headerMedia: "/images/project1-header.jpg",
+    media: ["/images/project1-1.jpg", "/images/project1-2.jpg"],
+    footer: "Project 1 footer information",
+  },
   "dev-portfolio": {
     id: "dev-portfolio",
     title: "Dev Portfolio Website",
@@ -15,21 +24,12 @@ export const projects: Record<string, Project> = {
   "ugc-website": {
     id: "ugc-website",
     title: "UGC Website",
-    description: "A website dis",
+    description: "Website for hosting and branding user-generated content.",
     techStack: ["Next.js", "TypeScript", "Tailwind CSS"],
     headerMedia: "/images/project1-header.jpg",
     media: ["/images/project1-1.jpg", "/images/project1-2.jpg"],
     footer: "Project 1 footer information",
     link: "https://media.alexandmin.com/example"
-  },
-  "bright-side-app": {
-    id: "bright-side-app",
-    title: "Bright Side App",
-    description: "App for creating and sharing uplifting messages around the world.",
-    techStack: ["React Native", "Expo", "Tamagui", "GraphQL", "AWS", "Node.js", "Python"],
-    headerMedia: "/images/project1-header.jpg",
-    media: ["/images/project1-1.jpg", "/images/project1-2.jpg"],
-    footer: "Project 1 footer information",
   },
   "ai-agent-web-kit": {
     id: "ai-agent-web-kit",
