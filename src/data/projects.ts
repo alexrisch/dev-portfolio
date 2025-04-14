@@ -26,8 +26,9 @@ export const projects: Record<string, Project> = {
     title: "UGC Website",
     description: "Website for hosting and branding user-generated content.",
     techStack: ["Next.js", "TypeScript", "Tailwind CSS"],
-    headerMedia: "/images/project1-header.jpg",
-    media: ["/images/project1-1.jpg", "/images/project1-2.jpg"],
+    headerMedia: "/ugc-site/web.png",
+    headerMediaMobile: "/ugc-site/mobile.png",
+    media: ["/ugc-site/mobile.png", "/ugc-site/tablet.png",  "/ugc-site/web.png"],
     footer: "Project 1 footer information",
     link: "https://media.alexandmin.com/example"
   },

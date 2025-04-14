@@ -4,6 +4,7 @@ export interface Project {
   description: string;
   techStack: string[];
   headerMedia: string;
+  headerMediaMobile?: string;
   media: string[];
   footer?: string;
   repoLink?: string;
