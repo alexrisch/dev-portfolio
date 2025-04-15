@@ -1,42 +1,44 @@
 import { Project } from '@/types/project';
 
+const basePath = process.env.NODE_ENV === 'production' ? '/alex-portfolio-web' : '';
+
 export const projects: Record<string, Project> = {
   "bright-side-app": {
     id: "bright-side-app",
     title: "Bright Side App",
     description: "App for creating and sharing uplifting messages around the world.",
     techStack: ["React Native", "Expo", "Tamagui", "GraphQL", "AWS", "Node.js", "Python"],
-    headerMedia: "/bright-side-app/app-feed-light.png",
+    headerMedia: `${basePath}/bright-side-app/app-feed-light.png`,
     media: [
       // Light Theme - App Flow
-      "/bright-side-app/app-welcome-light.png",
-      "/bright-side-app/app-auth-light.png",
-      "/bright-side-app/app-feed-light.png",
-      "/bright-side-app/app-thread-light.png",
-      "/bright-side-app/app-threadmenu-light.png",
-      "/bright-side-app/app-threadtoast-light.png",
-      "/bright-side-app/app-message-compose-light.png",
-      "/bright-side-app/app-newtyping-light.png",
-      "/bright-side-app/app-replies-light.png",
-      "/bright-side-app/app-profile-light.png",
-      "/bright-side-app/app-notification-light.png",
-      "/bright-side-app/app-express-light.png",
-      "/bright-side-app/app-over-light.png",
+      `${basePath}/bright-side-app/app-welcome-light.png`,
+      `${basePath}/bright-side-app/app-auth-light.png`,
+      `${basePath}/bright-side-app/app-feed-light.png`,
+      `${basePath}/bright-side-app/app-thread-light.png`,
+      `${basePath}/bright-side-app/app-threadmenu-light.png`,
+      `${basePath}/bright-side-app/app-threadtoast-light.png`,
+      `${basePath}/bright-side-app/app-message-compose-light.png`,
+      `${basePath}/bright-side-app/app-newtyping-light.png`,
+      `${basePath}/bright-side-app/app-replies-light.png`,
+      `${basePath}/bright-side-app/app-profile-light.png`,
+      `${basePath}/bright-side-app/app-notification-light.png`,
+      `${basePath}/bright-side-app/app-express-light.png`,
+      `${basePath}/bright-side-app/app-over-light.png`,
 
       // Dark Theme - App Flow
-      "/bright-side-app/app-welcome-dark.png",
-      "/bright-side-app/app-auth-dark.png",
-      "/bright-side-app/app-feed-dark.png",
-      "/bright-side-app/app-thread-dark.png",
-      "/bright-side-app/app-threadmenu-dark.png",
-      "/bright-side-app/app-threadtoast-dark.png",
-      "/bright-side-app/app-newtyping-dark.png",
-      "/bright-side-app/app-profile-dark.png",
-      "/bright-side-app/app-notificiation-dark.png",
-      "/bright-side-app/app-connected-dark.png",
-      "/bright-side-app/app-safe-dark.png",
-      "/bright-side-app/app-express-dark.png",
-      "/bright-side-app/app-over-dark.png"
+      `${basePath}/bright-side-app/app-welcome-dark.png`,
+      `${basePath}/bright-side-app/app-auth-dark.png`,
+      `${basePath}/bright-side-app/app-feed-dark.png`,
+      `${basePath}/bright-side-app/app-thread-dark.png`,
+      `${basePath}/bright-side-app/app-threadmenu-dark.png`,
+      `${basePath}/bright-side-app/app-threadtoast-dark.png`,
+      `${basePath}/bright-side-app/app-newtyping-dark.png`,
+      `${basePath}/bright-side-app/app-profile-dark.png`,
+      `${basePath}/bright-side-app/app-notificiation-dark.png`,
+      `${basePath}/bright-side-app/app-connected-dark.png`,
+      `${basePath}/bright-side-app/app-safe-dark.png`,
+      `${basePath}/bright-side-app/app-express-dark.png`,
+      `${basePath}/bright-side-app/app-over-dark.png`
     ],
     link: "https://testflight.apple.com/join/NuMgKg7Q",
     workInProgress: true
@@ -56,9 +58,13 @@ export const projects: Record<string, Project> = {
     title: "UGC Website",
     description: "Website for hosting and branding user-generated content.",
     techStack: ["Next.js", "TypeScript", "Tailwind CSS"],
-    headerMedia: "/ugc-site/web.png",
-    headerMediaMobile: "/ugc-site/mobile.png",
-    media: ["/ugc-site/mobile.png", "/ugc-site/tablet.png",  "/ugc-site/web.png"],
+    headerMedia: `${basePath}/ugc-site/web.png`,
+    headerMediaMobile: `${basePath}/ugc-site/mobile.png`,
+    media: [
+      `${basePath}/ugc-site/mobile.png`,
+      `${basePath}/ugc-site/tablet.png`,
+      `${basePath}/ugc-site/web.png`
+    ],
     link: "https://media.alexandmin.com/example"
   },
   "ai-agent-web-kit": {
