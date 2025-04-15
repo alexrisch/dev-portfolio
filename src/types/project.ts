@@ -9,4 +9,5 @@ export interface Project {
   footer?: string;
   repoLink?: string;
   link?: string;
+  workInProgress?: boolean;
 } 

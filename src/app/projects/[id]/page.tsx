@@ -24,8 +24,11 @@ export default async function ProjectPage({ params }: { params: Promise<{ id: st
         </Link>
 
         <article>
-          <h1 className="text-4xl font-bold mb-4">{project.title}</h1>
-
+          <h1 className="text-4xl font-bold mb-4">{project.title}
+            {project.workInProgress && (
+              <span className="text-gray-500 text-sm ml-2">Work in Progress</span>
+            )}
+          </h1>
           <div className="mb-8">
             <ResponsiveHeaderImage
               desktopImage={project.headerMedia}
@@ -69,14 +72,15 @@ export default async function ProjectPage({ params }: { params: Promise<{ id: st
 
           <div className="mb-8">
             <h2 className="text-2xl font-semibold mb-4">Gallery</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
               {project.media.map((mediaUrl, index) => (
-                <div key={index} className="relative h-64">
+                <div key={index} className="relative">
                   <Image
                     src={mediaUrl}
                     alt={`${project.title} image ${index + 1}`}
-                    fill
-                    className="object-cover rounded-lg"
+                    className="object-contain rounded-lg"
+                    width={200}
+                    height={200}
                   />
                 </div>
               ))}
