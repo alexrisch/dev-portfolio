@@ -6,8 +6,9 @@ import { ProjectDescription } from '@/components/ProjectDescription';
 import { ProjectGallery } from '@/components/ProjectGallery';
 import { ProjectFooter } from '@/components/ProjectFooter';
 
-export default function ProjectPage({ params }: { params: { id: string } }) {
-  const projectIndex = params.id;
+export default async function ProjectPage({ params }: { params: Promise<{ id: string }> }) {
+  const pageParams = await params;
+  const projectIndex = pageParams.id;
   const project = projects[projectIndex];
 
   if (!project) {
