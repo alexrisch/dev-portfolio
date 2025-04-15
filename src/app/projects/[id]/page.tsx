@@ -2,7 +2,7 @@ import { projectIds, projects } from '@/data/projects';
 import Image from 'next/image';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
-import { ResponsiveHeaderImage } from '@/components/ResponsiveHeaderImage';
+import { ResponsiveHeroImage } from '@/components/ResponsiveHeroImage';
 
 export default async function ProjectPage({ params }: { params: Promise<{ id: string }> }) {
   const pageParams = await params;
@@ -30,11 +30,11 @@ export default async function ProjectPage({ params }: { params: Promise<{ id: st
             )}
           </h1>
           <div className="mb-8">
-            <ResponsiveHeaderImage
+            <ResponsiveHeroImage
               desktopImage={project.headerMedia}
               mobileImage={project.headerMediaMobile}
               alt={project.title}
-              className="rounded-lg"
+              className="rounded-lg object-container"
             />
           </div>
           {project.link && (
