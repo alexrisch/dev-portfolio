@@ -1,6 +1,6 @@
 import { Project } from '@/types/project';
 
-const basePath = process.env.NODE_ENV === 'production' ? '/alex-portfolio-web' : '';
+const basePath = process.env.NODE_ENV === 'production' ? '/dev-portfolio' : '';
 
 export const projects: Record<string, Project> = {
   "bright-side-app": {
@@ -99,10 +99,10 @@ export const projects: Record<string, Project> = {
     title: "Bright Side Website",
     description: "Website for the Bright Side project.",
     techStack: ["Next.js", "TypeScript", "Tailwind CSS"],
-    headerMedia: "/bright-side-web/bright-side-light.png",
-    media: ["/bright-side-web/bright-side-dark.png", "/bright-side-web/bright-side-light.png"],
+    headerMedia: `${basePath}/bright-side-web/bright-side-light.png`,
+    media: [`${basePath}/bright-side-web/bright-side-dark.png`, `${basePath}/bright-side-web/bright-side-light.png`],
     link: "https://brightside-website-production.up.railway.app",
-  workInProgress: true
+    workInProgress: true
   },
   "thailand-nomad-agent": {
     id: "thailand-nomad-agent",
