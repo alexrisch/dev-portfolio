@@ -71,9 +71,13 @@ export const projects: Record<string, Project> = {
     id: "ai-agent-web-kit",
     title: "AI Agent Web Kit",
     description: "Small web kit setup for integrating AI agents into a Next.js application.",
-    techStack: ["Next.js", "TypeScript", "Tailwind CSS", "Langchain", "OpenAI"],
-    headerMedia: "/images/project1-header.jpg",
-    media: ["/images/project1-1.jpg", "/images/project1-2.jpg"],
+    techStack: ["Next.js", "TypeScript", "Tailwind CSS", "Langchain", "OpenAI", "ChakraUI"],
+    headerMedia:  `${basePath}/agent-webkit/agentkit-home.png`,
+    media: [
+      `${basePath}/agent-webkit/agentkit-home.png`,
+      `${basePath}/agent-webkit/agentkit-drawer.png`,
+      `${basePath}/agent-webkit/agentkit-fulldrawer.png`,
+    ],
     repoLink: "https://github.com/alexrisch/agent-web-kit",
     link: "https://agent-web-kit-production.up.railway.app/"
   },
@@ -109,8 +113,13 @@ export const projects: Record<string, Project> = {
     title: "Thailand Nomad Agent",
     description: "Agent for the Thailand Nomad project.",
     techStack: ["Next.js", "TypeScript", "Tailwind CSS", "Python", "Langchain", "OpenAI", "Stripe"],
-    headerMedia: "/images/project1-header.jpg",
-    media: ["/images/project1-1.jpg", "/images/project1-2.jpg"],
+    headerMedia: `${basePath}/thai-agent/thai-agent-home.png`,
+    media: [
+      `${basePath}/thai-agent/thai-agent-home.png`,
+      `${basePath}/thai-agent/thai-agent-create.png`,
+      `${basePath}/thai-agent/thai-agent-login.png`,
+      `${basePath}/thai-agent/thai-agent-subscribe.png`,
+    ],
     workInProgress: true
   }
 };

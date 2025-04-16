@@ -30,13 +30,15 @@ export function ProjectGallery({ project }: ProjectGalleryProps) {
             }}
             className="relative"
           >
-            <Image
-              src={mediaUrl}
-              alt={`${project.title} image ${index + 1}`}
-              className="object-contain rounded-lg"
-              width={200}
-              height={200}
-            />
+            <a href={mediaUrl} rel="noopener noreferrer">
+              <Image
+                src={mediaUrl}
+                alt={`${project.title} image ${index + 1}`}
+                className="object-contain rounded-lg"
+                width={200}
+                height={200}
+              />
+            </a>
           </motion.div>
         ))}
       </div>
