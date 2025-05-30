@@ -43,16 +43,7 @@ export const projects: Record<string, Project> = {
     link: "https://testflight.apple.com/join/NuMgKg7Q",
     workInProgress: true
   },
-  "dev-portfolio": {
-    id: "dev-portfolio",
-    title: "Dev Portfolio Website",
-    description: "A portfolio website built with Next.js, TypeScript, and Tailwind CSS.",
-    techStack: ["Next.js", "TypeScript", "Tailwind CSS"],
-    headerMedia: "/images/project1-header.jpg",
-    media: ["/images/project1-1.jpg", "/images/project1-2.jpg"],
-    repoLink: "https://github.com/alexrisch/dev-portfolio",
-    link: "https://alexrisch.github.io/dev-portfolio/"
-  },
+
   "ugc-website": {
     id: "ugc-website",
     title: "UGC Website",
@@ -81,6 +72,53 @@ export const projects: Record<string, Project> = {
     repoLink: "https://github.com/alexrisch/agent-web-kit",
     link: "https://agent-web-kit-production.up.railway.app/"
   },
+  "bright-side-website": {
+    id: "bright-side-website",
+    title: "Bright Side Website",
+    description: "Website for the Bright Side project.",
+    techStack: ["Next.js", "TypeScript", "Tailwind CSS"],
+    headerMedia: `${basePath}/bright-side-web/bright-side-web.16.53 AM.png`,
+    media: [
+      `${basePath}/bright-side-web/bright-side-web.16.53 AM.png`,
+      `${basePath}/bright-side-web/bright-side-web.17.03 AM.png`,
+      `${basePath}/bright-side-web/bright-side-web.17.10 AM.png`,
+      `${basePath}/bright-side-web/bright-side-web.17.20 AM.png`,
+      `${basePath}/bright-side-web/bright-side-web.17.29 AM.png`,
+      `${basePath}/bright-side-web/bright-side-web.17.37 AM.png`,
+      `${basePath}/bright-side-web/bright-side-web.18.19 AM.png`,
+      `${basePath}/bright-side-web/bright-side-web.18.26 AM.png`,
+      `${basePath}/bright-side-web/bright-side-web.19.06 AM.png`,
+      `${basePath}/bright-side-web/bright-side-web.19.18 AM.png`,
+    ],
+    link: "https://brightside-website-production.up.railway.app",
+  },
+  "thailand-nomad-agent": {
+    id: "thailand-nomad-agent",
+    title: "Thailand Nomad Agent",
+    description: "Agent for the Thailand Nomad project.",
+    techStack: ["Next.js", "TypeScript", "Tailwind CSS", "Python", "Langchain", "OpenAI", "Stripe"],
+    headerMedia: `${basePath}/thai-agent/thai-agent-home.png`,
+    media: [
+      `${basePath}/thai-agent/thai-agent-home.png`,
+      `${basePath}/thai-agent/thai-agent-create.png`,
+      `${basePath}/thai-agent/thai-agent-login.png`,
+      `${basePath}/thai-agent/thai-agent-subscribe.png`,
+    ],
+    workInProgress: true
+  },
+  "dev-portfolio": {
+    id: "dev-portfolio",
+    title: "Dev Portfolio Website",
+    description: "A portfolio website built with Next.js, TypeScript, and Tailwind CSS.",
+    techStack: ["Next.js", "TypeScript", "Tailwind CSS"],
+    headerMedia: `${basePath}/dev-portfolio/dev-portfolio-web.30 PM.png`,
+    media: [
+      `${basePath}/dev-portfolio/dev-portfolio-web.30 PM.png`,
+      `${basePath}/dev-portfolio/dev-portfolio-web.17 PM.png`,
+    ],
+    repoLink: "https://github.com/alexrisch/dev-portfolio",
+    link: "https://alexrisch.github.io/dev-portfolio/"
+  },
   "ai-agent-react-native-kit": {
     id: "ai-agent-react-native-kit",
     title: "AI Agent React Native Starter Kit",
@@ -98,30 +136,6 @@ export const projects: Record<string, Project> = {
     headerMedia: "/images/project1-header.jpg",
     media: [],
   },
-  "bright-side-website": {
-    id: "bright-side-website",
-    title: "Bright Side Website",
-    description: "Website for the Bright Side project.",
-    techStack: ["Next.js", "TypeScript", "Tailwind CSS"],
-    headerMedia: `${basePath}/bright-side-web/bright-side-light.png`,
-    media: [`${basePath}/bright-side-web/bright-side-dark.png`, `${basePath}/bright-side-web/bright-side-light.png`],
-    link: "https://brightside-website-production.up.railway.app",
-    workInProgress: true
-  },
-  "thailand-nomad-agent": {
-    id: "thailand-nomad-agent",
-    title: "Thailand Nomad Agent",
-    description: "Agent for the Thailand Nomad project.",
-    techStack: ["Next.js", "TypeScript", "Tailwind CSS", "Python", "Langchain", "OpenAI", "Stripe"],
-    headerMedia: `${basePath}/thai-agent/thai-agent-home.png`,
-    media: [
-      `${basePath}/thai-agent/thai-agent-home.png`,
-      `${basePath}/thai-agent/thai-agent-create.png`,
-      `${basePath}/thai-agent/thai-agent-login.png`,
-      `${basePath}/thai-agent/thai-agent-subscribe.png`,
-    ],
-    workInProgress: true
-  }
 };
 
 export const projectIds = Object.keys(projects);

@@ -2,6 +2,8 @@
 
 import { motion } from 'framer-motion';
 import { Project } from '@/types/project';
+import Link from 'next/link';
+import { EyeIcon } from 'lucide-react';
 
 interface ProjectLinksProps {
   project: Project;
@@ -9,22 +11,23 @@ interface ProjectLinksProps {
 
 export function ProjectLinks({ project }: ProjectLinksProps) {
   return (
-    <>
+    <div className="flex flex-row gap-4 justify-center">
       {project.link && (
         <motion.div
           initial={{ opacity: 0, x: -50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="mb-8"
+          className="mt-12 text-center"
         >
-          <a
+          <Link
             href={project.link}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-block px-6 py-3 bg-black text-white dark:bg-white dark:text-black rounded-lg hover:bg-gray-800 dark:hover:bg-gray-200 transition-colors"
+            className="inline-flex items-center gap-2 rounded-lg bg-[#3d98f4] px-6 py-3 text-base font-semibold text-white shadow-lg transition-transform hover:scale-105 hover:bg-[#2a7bc8] focus:outline-none focus:ring-2 focus:ring-[#3d98f4] focus:ring-offset-2 focus:ring-offset-[#101a23]"
           >
+            <EyeIcon className="h-5 w-5" />
             View Project
-          </a>
+          </Link>
         </motion.div>
       )}
 
@@ -33,18 +36,18 @@ export function ProjectLinks({ project }: ProjectLinksProps) {
           initial={{ opacity: 0, x: 50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, delay: 1.0 }}
-          className="mb-8"
+          className="mt-12 text-center"
         >
-          <a
+          <Link
             href={project.repoLink}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-block px-6 py-3 bg-black text-white dark:bg-white dark:text-black rounded-lg hover:bg-gray-800 dark:hover:bg-gray-200 transition-colors"
+            className="inline-flex items-center gap-2 rounded-lg bg-[#3d98f4] px-6 py-3 text-base font-semibold text-white shadow-lg transition-transform hover:scale-105 hover:bg-[#2a7bc8] focus:outline-none focus:ring-2 focus:ring-[#3d98f4] focus:ring-offset-2 focus:ring-offset-[#101a23]"
           >
             View Repository
-          </a>
+          </Link>
         </motion.div>
       )}
-    </>
+    </div>
   );
 } 

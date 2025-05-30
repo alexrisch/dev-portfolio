@@ -1,8 +1,5 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import "./globals.css";
-
-const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Alex Risch - Portfolio",
@@ -16,9 +13,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>
-        <div className="min-h-screen bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100">
-          {children}
+      <body className="bg-[#101a23] dark group/design-root" style={{ fontFamily: '"Space Grotesk", "Noto Sans", sans-serif' }}>
+        <div className="relative flex size-full min-h-screen flex-col overflow-x-hidden">
+          <div className="layout-container flex h-full grow flex-col">
+            {children}
+          </div>
         </div>
       </body>
     </html>

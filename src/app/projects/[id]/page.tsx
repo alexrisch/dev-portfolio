@@ -3,8 +3,6 @@ import { notFound } from 'next/navigation';
 import { ProjectHero } from '@/components/ProjectHero';
 import { ProjectLinks } from '@/components/ProjectLinks';
 import { ProjectDescription } from '@/components/ProjectDescription';
-import { ProjectGallery } from '@/components/ProjectGallery';
-import { ProjectFooter } from '@/components/ProjectFooter';
 
 export default async function ProjectPage({ params }: { params: Promise<{ id: string }> }) {
   const pageParams = await params;
@@ -16,13 +14,11 @@ export default async function ProjectPage({ params }: { params: Promise<{ id: st
   }
 
   return (
-    <main className="min-h-screen p-8">
-      <div className="max-w-4xl mx-auto">
+    <main className="flex-1 px-4 py-8 sm:px-8 md:px-16 lg:px-24 xl:px-40">
+      <div className="mx-auto max-w-4xl">
         <ProjectHero project={project} />
-        <ProjectLinks project={project} />
         <ProjectDescription project={project} />
-        <ProjectGallery project={project} />
-        <ProjectFooter project={project} />
+        <ProjectLinks project={project} />
       </div>
     </main>
   );
